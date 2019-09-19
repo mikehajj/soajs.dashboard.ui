@@ -139,6 +139,9 @@ swaggerEditorSrv.service('swaggerEditorSrv', ['$timeout', 'ngDataApi', '$window'
 			currentScope.onGenerateError = "172: Missing required field : service version";
 			return false;
 		}
+		else {
+			serviceVersion = serviceVersion.toString();
+		}
 		
 		var requestTimeout = '';
 		if (Object.hasOwnProperty.call(currentScope.form.formData, "requestTimeout")) {
